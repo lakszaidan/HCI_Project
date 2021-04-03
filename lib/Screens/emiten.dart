@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/Screens/Drawer/myDrawer.dart';
 import 'package:flutter_auth/Screens/Kategori/agraria.dart';
 import 'package:flutter_auth/Screens/Kategori/konstruksi.dart';
 import 'package:flutter_auth/Screens/Kategori/konsumsi.dart';
@@ -21,9 +22,12 @@ class _EmitenState extends State<Emiten> {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        drawer: MyDrawer(),
         appBar: AppBar(
-          automaticallyImplyLeading: false,
-          toolbarHeight: 180,
+          iconTheme: IconThemeData(
+            color: kPrimaryColor
+          ),
+          toolbarHeight: 120,
           elevation: 0,
           backgroundColor: Color(0xFFFFFFFF),
           title: Column(
@@ -42,16 +46,7 @@ class _EmitenState extends State<Emiten> {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 30, bottom: 10),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Daftar Emiten",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
-                  ),
-                ),
-              ),
+              
             ],
           ),
           bottom: TabBar(

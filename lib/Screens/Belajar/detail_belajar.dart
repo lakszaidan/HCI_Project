@@ -47,7 +47,7 @@ class DetailBelajar extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 20)),
                   Hero(
-                    tag: '${item.newsTitle}',
+                    tag: item.newsTitle,
                     child: Image.network(item.imgUrl),
                   ),
                   SizedBox(

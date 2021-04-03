@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/text_style.dart';
 
 class ListData extends StatelessWidget {
-  String kode;
-  String nama;
-  String harga;
-  String fluktuasi;
-  TextStyle status;
+  final String kode;
+  final String nama;
+  final String harga;
+  final String fluktuasi;
+  final TextStyle status;
   
   ListData(this.kode, this.nama, this.harga, this.fluktuasi, this.status);
 

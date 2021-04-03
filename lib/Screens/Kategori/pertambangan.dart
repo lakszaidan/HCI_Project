@@ -46,7 +46,10 @@ class Pertambangan extends StatelessWidget {
               height: 2,
             ),
             ListData('UNVR', 'Unilever Indonesia Tbk.', '6.275', '+125 (+1.89%)', 
-              hargaEmitenPlus)
+              hargaEmitenPlus),
+            Divider(
+              height: 2,
+            ),
           ],
         ),
       ),

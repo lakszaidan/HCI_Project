@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Drawer/myDrawer.dart';
 import 'package:flutter_auth/constants.dart';
 
 class ProfilePage extends StatelessWidget {
   Widget header(double width, double height) {
-    return Stack(
+    return Padding(
+      padding: EdgeInsets.only(bottom: height * 0.1),
+      child: Stack(
       clipBehavior: Clip.none,
       children: [
         Container(
@@ -15,14 +16,14 @@ class ProfilePage extends StatelessWidget {
         ),
         Positioned(
           top: 40,
-          left: width * 0.325,
+          left: width * 0.33,
           child: Container(
             decoration: BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
                 border: Border.all(color: kMainColor, width: 2)),
             child: CircleAvatar(
-              radius: 70,
+              radius: width * 0.17,
               backgroundColor: kLightColor,
               child: Icon(
                 CupertinoIcons.person,
@@ -32,18 +33,18 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
       ],
+    ),
     );
   }
 
-  Widget textfield(String isi, String label, bool obsecure){
+  Widget textfield(String isi, String label, bool obsecure) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       child: TextFormField(
         decoration: InputDecoration(
-          labelText: label,
-          enabled: false,
-          floatingLabelBehavior: FloatingLabelBehavior.auto
-        ),
+            labelText: label,
+            enabled: false,
+            floatingLabelBehavior: FloatingLabelBehavior.auto),
         initialValue: isi,
         obscureText: obsecure,
       ),
@@ -63,34 +64,32 @@ class ProfilePage extends StatelessWidget {
           style: TextStyle(color: kMainColor, fontWeight: FontWeight.bold),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            header(data.width, data.height),
-            SizedBox(
-              height: data.height * 0.1,
-            ),
-            Text(
-              'Ravi "Investor Muda" Haryo',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            Container(
-              color: kSecondaryColor,
-              margin: EdgeInsets.only(top: 30),
-              padding: EdgeInsets.only(left: 20, top: 30, bottom: 30),
-              alignment: Alignment.topLeft,
-              child: Text(
-              'Watchlist: 5',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            ),
-            SizedBox(
-              height: 20
-            ),
-            textfield('Ravi Haryo', 'Nama', false),
-            textfield('ravisolo@mail.com', 'Email', false),
-            textfield('hahahaha', 'Password', true),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              header(data.width, data.height),
+              Text(
+                'Ravi "Investor Muda" Haryo',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Container(
+                color: kSecondaryColor,
+                margin: EdgeInsets.only(top: 30),
+                padding: EdgeInsets.only(left: 20, top: 30, bottom: 30),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Watchlist: 5',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(height: 20),
+              textfield('Ravi Haryo', 'Nama', false),
+              textfield('ravisolo@mail.com', 'Email', false),
+              textfield('hahahaha', 'Password', true),
+              SizedBox(height: 30),
+            ],
+          ),
         ),
       ),
     );

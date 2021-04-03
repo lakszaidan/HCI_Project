@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Berita/detail_berita.dart';
+import 'package:flutter_auth/Screens/Belajar/detail_belajar.dart';
 import 'package:flutter_auth/Screens/Berita/widgetlist.dart';
 import 'package:flutter_auth/Screens/Drawer/myDrawer.dart';
 import 'package:flutter_auth/Screens/Berita/berita.dart';
-import 'package:flutter_auth/components/text_style.dart';
 import 'package:flutter_auth/constants.dart';
 
 class BelajarPage extends StatefulWidget {
@@ -113,7 +112,7 @@ class _BelajarPageState extends State<BelajarPage>
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DetailScreen(
+                        builder: (context) => DetailBelajar(
                               item: listTiles[index],
                               tag: listTiles[index].newsTitle,
                               content: listTiles[index].content,

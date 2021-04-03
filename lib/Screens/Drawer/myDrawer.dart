@@ -44,8 +44,7 @@ class MyDrawer extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              // onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              //     builder: (BuildContext context) => LikedVids())),
+              onTap: () {}
             ),
             Divider(height: 0.5),
             ListTile(
