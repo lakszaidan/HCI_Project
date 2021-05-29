@@ -7,7 +7,7 @@ class Konsumen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: [
             ListData('CLEO', 'Sariguna Primatirta Tbk.', '460', '-6 (-2.05%)', 

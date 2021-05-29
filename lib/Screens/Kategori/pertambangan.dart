@@ -7,7 +7,7 @@ class Pertambangan extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: [
             ListData('ADRO', 'Surya Esa Perkasa Tbk', '1.175', '+38 (+11.52%)',

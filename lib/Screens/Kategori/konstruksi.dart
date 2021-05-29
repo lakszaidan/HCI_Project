@@ -7,7 +7,7 @@ class Infrastruktur extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: [
             ListData('EXCL', 'XL Axiata Tbk.', '2.080', '-10 (-2.05%)', 

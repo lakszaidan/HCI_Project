@@ -7,7 +7,7 @@ class Keuangan extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: [
             ListData('AMAR', 'Bank Amar Indonesia', '286', '-6 (-2.05%)', 
